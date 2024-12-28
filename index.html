@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <style>
+    /* General Styles */
+    @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;700&display=swap');
+    body {
+      font-family: 'Kantumruy Pro', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: linear-gradient(to right, #ffefba, #ffffff);
+      background: url('https://scontent.fpnh5-2.fna.fbcdn.net/v/t39.30808-6/468552625_2189427774777340_1176900731125401505_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGGmfcfNoGa3IZmWN6FxJqv-P1p3cTNe8f4_WndxM17x9teqW2KP6CqUDPxejp9HGC7aOZuYnsfm3XiAeet3S5B&_nc_ohc=G-4Rp5xkBL8Q7kNvgHImwHm&_nc_oc=Adjougae09V5lUijC0zg-UiKBA4jPQoH9v4BqHN0s0Bqd-gKFVezWsC1HZpsyvteiMo&_nc_zt=23&_nc_ht=scontent.fpnh5-2.fna&_nc_gid=AOPojnQ6Un8DfVkjqwBqnxB&oh=00_AYCpVxaNkBlq_RafT9rc14L7A4rL57RsEx8bYJRSPwKwSg&oe=67749DB9') no-repeat center center fixed; /* Set background image */
+      background-size: cover; /* Make sure the image covers the full screen */
+      overflow: hidden;
+    }
+
+    /* Container */
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    .content {
+      width: 80%;
+      max-width: 800px;
+      hieght: 100%;
+      padding: 10px;
+      background-color: #fff9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      animation: slideUp 1s ease-out;
+    }
+
+    /* Welcome Page */
+    .welcome h1 {
+      font-size: 36px;
+      color: #b76e79;
+      animation: fadeInText 2s ease-in-out;
+      animation: bounce 3s infinite;
+    }
+
+    .welcome p {
+      font-size: 18px;
+      margin: 20px;
+    }
+
+    .welcome button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #b76e79;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .welcome button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Invitation Page */
+    .invitation {
+      max-height: 80vh;
+      overflow-y: auto; /* Enable scrolling */
+      padding: 10px;
+      animation: fadeInText 3s ease-in-out;
+    }
+    .invitation h1 {
+      font-size: 36px;
+      color: #b76e79;
+      animation: fadeInText 2s ease-in-out;
+      animation: bounce 3s infinite;
+    }  
+
+    .couple {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 40px 0;
+    }
+    
+    .couple h2 {
+      font-family: Moulpali;
+      color: #fffff;
+      animation: fadeInText 2s ease-in-out;
+      
+    }
+
+    .couple img {
+      width: 180px;
+      height: 180px;
+      border-radius: 100%;
+      border: 2px solid #fffff;
+      transition: transform 0.3s;
+    }
+
+    .couple img:hover {
+      transform: scale(1.2);
+    }
+
+    .details h2 {
+      color: #b76e79;
+      margin: 10px 0;
+    }
+
+    .details p {
+      margin: 5px 0;
+    }
+
+    .calendar, .location {
+      margin: 20px 0;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #b76e79;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    /* Hide scrollbar but allow scrolling */
+	.invitation {
+ 		 max-height: 80vh;
+  		overflow-y: scroll; /* Enable vertical scrolling */
+  		scrollbar-width: none; /* Hide scrollbar for Firefox */
+  		-ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+	}
+
+    /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+    .invitation::-webkit-scrollbar {
+      display: none;
+    }
+    
+
+
+    /* Animations */
+    
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+     @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(-5px);
+        opacity: 1;
+      }
+    }
+    
+
+    /* Hide content initially */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Container -->
+  <div class="container">
+    <div id="content" class="content">
+      <!-- Welcome Page -->
+      <div id="welcome-page" class="welcome">
+        <h1>សូមស្វាគមន៍!</h1>
+        <p>សូមគោរពអញ្ជើញឯកឧត្តម លោកជំទាំវ លោកលោកស្រី អ្នកនាងកញ្ញា ភ្ញៀវកិត្តយស ចូលរួមពិធីមង្គលការរបស់យើង</p>
+        <p>ចុចប៊ូតុងខាងក្រោមដើម្បីមើលព័ត៌មានលម្អិត</p>
+        <button onclick="showInvitation()">លិខិតអញ្ជើញ</button>
+      </div>
+
+      <!-- Invitation Page -->
+      <div id="invitation-page" class="hidden invitation">
+        <h1>ពិធីអាពាហ៍ពិពាហ៍</h1>
+        <div class="couple">
+          <div>
+            <img src="https://scontent.fpnh5-6.fna.fbcdn.net/v/t39.30808-6/468588305_2189427708110680_4771136191120570701_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGojIW99__Sr-68eR3VQlrjcN0M_wq71Uhw3Qz_CrvVSBHYG7E97rWGZdZx9qfXkIMIXwlGyjhWDDBIUIo0O5_i&_nc_ohc=iV0cLGWh4wMQ7kNvgGl7z8V&_nc_oc=AdiK60Ac2uHpyLwppmiLl_WHL0Rqv7bgMpcp9b4WXOA2AQYpZSCzF3DFwrEUzx-RxAI&_nc_zt=23&_nc_ht=scontent.fpnh5-6.fna&_nc_gid=Ador_WeWEUVE-XIV92v0qkY&oh=00_AYDDhhuWPUBLkrcBoNSvNPtr184jpiWgFel-hbrawZcaBQ&oe=6774CB10" alt="Groom">
+            <h2 >ហួរ ចន្ទរឹទ្ធី</h2>
+          </div>
+          <div>
+            <img src="https://scontent.fpnh5-4.fna.fbcdn.net/v/t39.30808-6/468493824_2189427798110671_102335461142901764_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeH3sHudGmWtwECx1AJk4HNelTHi4d_iFNmVMeLh3-IU2aqL_CgooaCXm2H0Lue0wTW44jYhkBLBdKsbTg9eMxf_&_nc_ohc=Kae0m-nRSmwQ7kNvgEEzrkS&_nc_oc=AdirxfKbO-I5eImB13OMz_p0vRIxRk4zUn52896ex45AS0wnxXuzaSXB1gAOaakugsc&_nc_zt=23&_nc_ht=scontent.fpnh5-4.fna&_nc_gid=Aic_Yt19uHSYFmfqfAwURcA&oh=00_AYApmIdmzAk-P0lorP_b2k1vKNbajTUs9fqyR6wj_Ry9HA&oe=6774AB06" alt="Bride">
+            <h2>អ៊ុត ឆៀកម៉ី</h2>
+            
+          </div>
+        </div>
+        <div class="details">
+          <h1>កម្មវិធី</h1>
+          <div class="calendar">
+            <h3>ថ្ងៃប្រារព្ធពិធី</h3>
+            <p>ថ្ងៃសៅរ៍, ១៥ ខែមករា ឆ្នាំ២០២៤</p>
+            <p>ម៉ោង ០៦:៣០ ព្រឹក ដល់ ១១:៥៩ យប់</p>
+          </div>
+          <div class="location">
+            <h3>ទីតាំង:</h3>
+            <p>សាលមង្គលភោជនីយដ្ឋាន ភ្នំពេញ</p>
+          </div>
+          <h3>ពិធីពិសេស</h3>
+          <p>ពិធីសែស និងអភិសេកគូស្នេហ៍</p>
+        </div>
+        <h2>Wedding Photo Collection</h2>
+  <div class="gallery">
+    <!-- Add your wedding photo URLs here -->
+    <img src="photo1.jpg" alt="Wedding Photo 1" />
+    <img src="photo2.jpg" alt="Wedding Photo 2" />
+    <img src="photo3.jpg" alt="Wedding Photo 3" />
+    <img src="photo4.jpg" alt="Wedding Photo 4" />
+    <img src="photo5.jpg" alt="Wedding Photo 5" />
+    <img src="photo6.jpg" alt="Wedding Photo 6" />
+  </div>
+        <button class="back-btn" onclick="showWelcome()">ត្រឡប់ទៅមុខ</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Show Invitation Page
+    function showInvitation() {
+      document.getElementById('welcome-page').classList.add('hidden');
+      document.getElementById('invitation-page').classList.remove('hidden');
+    }
+
+    // Show Welcome Page
+    function showWelcome() {
+      document.getElementById('invitation-page').classList.add('hidden');
+      document.getElementById('welcome-page').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
